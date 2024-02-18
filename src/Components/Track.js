@@ -13,7 +13,7 @@ const Track = () => {
 
   useEffect(() => {
     if (inputValue) return;
-    fetch(`http://localhost:8000/foods`, {
+    fetch(`https://nutrition-app-backend.vercel.app/foods`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${loggedData.loggedUser.token}`,
@@ -32,7 +32,7 @@ const Track = () => {
     setInputValue(event.target.value);
 
     if (event.target.value.length !== 0) {
-      fetch(`http://localhost:8000/foods/${event.target.value}`, {
+      fetch(`https://nutrition-app-backend.vercel.app/foods/${event.target.value}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${loggedData.loggedUser.token}`,

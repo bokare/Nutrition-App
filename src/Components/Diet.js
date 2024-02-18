@@ -19,7 +19,7 @@ export default function Diet() {
 
   useEffect(() => {
     fetch(
-      `http://localhost:8000/track/${loggedData.loggedUser.userid}/${
+      `https://nutrition-app-backend.vercel.app/track/${loggedData.loggedUser.userid}/${
         date.getMonth() + 1
       }-${date.getDate()}-${date.getFullYear()}`,
       {
