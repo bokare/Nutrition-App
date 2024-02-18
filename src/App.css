@@ -48,7 +48,8 @@
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  /* filter: blur(10px);  */
+  background-attachment: fixed;
+  overflow-y: scroll;
 }
 
 .form {
@@ -253,7 +254,7 @@ The overflow-x: hidden property ensures that horizontal scrolling is disabled. *
   display: flex;
   width: 100%;
   column-gap: 2%;
-  margin-top: 70px;
+  margin-top: 40px;
   flex-wrap: wrap;
 }
 
@@ -291,7 +292,7 @@ The overflow-x: hidden property ensures that horizontal scrolling is disabled. *
   color: rgb(255, 255, 255);
   padding: 15px 20px;
   /* background-color: #535961; */
-  background-color: #dcc099 ;
+  background-color: #cfb38b ;
 
   margin: 15px 0;
   border-radius: 20px;

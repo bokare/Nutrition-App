@@ -12,7 +12,6 @@ export default function Food(props) {
     setFood(props.food);
     setFoodInital(props.food);
 
-    console.log(loggedData);
   }, [props.food]);
 
   function calculateMacros(event) {
@@ -45,8 +44,6 @@ export default function Food(props) {
       },
       quantity: eatenQuantity,
     };
-
-    console.log(trackedItem);
 
     fetch("https://nutrition-app-backend.vercel.app/track", {
       method: "POST",

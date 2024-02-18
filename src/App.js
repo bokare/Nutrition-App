@@ -14,12 +14,8 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 
 function App() {
-  console.log("app refrehed");
-
   const [loggedUser, setLoggedUser] = useState(JSON.parse(localStorage.getItem("nutrify-user")));
   
-  console.log(loggedUser)
-
   return (
     <>
       <UserContext.Provider value={{ loggedUser, setLoggedUser }}>

@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { UserContext } from "../contexts/UserContext";
 import { useContext } from "react";
-import Header from "./Header";
 
 export default function Diet() {
   let loggedData = useContext(UserContext);
@@ -19,9 +18,9 @@ export default function Diet() {
 
   useEffect(() => {
     fetch(
-      `https://nutrition-app-backend.vercel.app/track/${loggedData.loggedUser.userid}/${
-        date.getMonth() + 1
-      }-${date.getDate()}-${date.getFullYear()}`,
+      `https://nutrition-app-backend.vercel.app/track/${
+        loggedData.loggedUser.userid
+      }/${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}`,
       {
         method: "GET",
         headers: {
@@ -31,7 +30,6 @@ export default function Diet() {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setItems(data);
       })
       .catch((err) => {
@@ -83,8 +81,8 @@ export default function Diet() {
 
               <p>
                 Protein - {item.details.protein}g, Carbs -
-                {item.details.carbohydrates}g, Fats - {(item.details.fat).toFixed(2)}g, Fiber - 
-                {item.details.fiber}g
+                {item.details.carbohydrates}g, Fats -{" "}
+                {item.details.fat.toFixed(2)}g, Fiber -{item.details.fiber}g
               </p>
             </div>
           );
@@ -94,8 +92,8 @@ export default function Diet() {
           <h3> Total : {total.totalCaloreis} Kcal </h3>
 
           <p>
-            Protein - {total.totalProtein}g, Carbs - {total.totalCarbs}g, Fats - {" "}
-            {(total.totalFats).toFixed(2)}g, Fiber  - {total.totalFiber}g
+            Protein - {total.totalProtein}g, Carbs - {total.totalCarbs}g, Fats -{" "}
+            {total.totalFats.toFixed(2)}g, Fiber - {total.totalFiber}g
           </p>
         </div>
       </div>

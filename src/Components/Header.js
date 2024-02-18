@@ -4,7 +4,6 @@ import { useNavigate, Link } from "react-router-dom";
 export default function Header() {
   const loggedData = useContext(UserContext);
   const navigate = useNavigate();
-  console.log(loggedData)
 
   function logout() {
     console.log("logout")
