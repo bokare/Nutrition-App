@@ -1,38 +1,306 @@
-.App {
+.home-c{
+  width: 100%;
+  min-height: 92vh;
+  background-color: antiquewhite;
+  padding-top: 20vh;
+
+}
+
+.home{
   text-align: center;
+  max-width: 590px;
+  margin: auto;
+  padding: 20px 30px;
+
+}
+.home h1{
+  font-family: cursive;
+  font-weight: 700;
+  color: rgb(237, 155, 2);
+}
+.home h2{
+  margin-top: 50px;
+  font-family: cursive;
+  font-weight: 600;
+  color: orange;
+
+}
+.home h3{
+  font-family:monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar .navbar-brand{
+  color: orange;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container-c {
+  height: 92vh;
+  width: 100%;
+  background-color: #404449;
+  color: red;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-image: url("https://media.istockphoto.com/id/1341976416/photo/healthy-eating-and-diet-concepts-top-view-of-spring-salad-shot-from-above-on-rustic-wood-table.jpg?s=2048x2048&w=is&k=20&c=nWGkfwnSCwArIXwRNh0hml9rJ5OIidpNA1Yh8HUyjpQ=");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: blur(10px);  */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
+  background-color: rgba(20, 0, 5, 0.3); 
+  border-radius: 20px;
+  /* background-color: red; */
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  row-gap: 15px;
+  align-items: flex-start;
+  max-width: 590px;
+  margin: 0 auto;
+  padding:20px 20px ;
+  font-family:cursive;
+
+}
+
+.inp {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  text-indent: 20px;
+  outline: none;
+  border: 1px solid gray;
+}
+
+.btn {
+  padding: 10px 40px;
+  border-radius: 5px;
+  background-color: #167ce0;
   color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid #167ce0;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  background-color: #5395d7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  color: #167ce0;
+  text-decoration: none;
+}
+
+
+.not-found {
+  width: 100%;
+  text-align: center;
+
+}
+
+
+.success {
+  background-color: lightgreen;
+  color: green;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.error {
+  background-color: lightpink;
+  color: red;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.invisible-msg {
+
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+
+/* track page css  ======================================*/
+.track-container {
+  align-items: center;
+  flex-direction: column;
+  min-height: 92vh;
+  height: fit-content;
+}
+
+.search {
+  position: relative;
+  width: 100%;
+  padding: 10px 0px;
+  max-width: 590px;
+  margin:unset auto;
+
+}
+
+.search-inp {
+  width: 100%;
+  height: 45px;
+  text-indent: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 18px;
+}
+
+.search-inp:focus {
+  border: 2px solid #53b5ae;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  width: 100%;
+  max-height: 210px;
+  /* Maximum height to show 5 options */
+  overflow-y: auto;
+  /* due to this property other options will not go outside. so slidebar comes*/
+
+  /* The overflow-y: auto property ensures that a vertical scrollbar appears when the content exceeds the maximum height.
+The overflow-x: hidden property ensures that horizontal scrolling is disabled. */
+
+  border: 2px solid #54a6b8;
+  padding: 5px 5px;
+  background-color: rgb(216, 224, 220);
+  border-radius: 5px;
+}
+
+
+
+
+.options p:hover {
+  background-color: #d79659;
+}
+
+.item {
+  margin: 0;
+  cursor: pointer;
+  /* padding-top: 10px; */
+  text-indent: 20px;
+  width: 100%;
+  color: black;
+  font-size: 1.1rem;
+  padding: 6px;
+}
+
+.food h3{
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  color: orangered;
+}
+
+.food {
+  width: 100%;
+  padding: 30px 0px;
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 590px;
+  margin: auto;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.food-img {
+  max-width: 80vw;
+  max-height: 40vh;
+  /* background-color: blue; */
+  /* margin: auto; */
+  border-radius: 5px;
+  margin-bottom: 0px;
+}
+
+.food-image {
+  min-width: 300px;
+  width: 100%;
+  margin: auto;
+  object-fit: cover;
+}
+
+.nutrient {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  /* background-color: #535961; */
+  background-color: #85e9bf  ;
+  font-size: large;
+  margin: auto;
+  width: 40%;
+  padding-top: 10px ;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.track-control {
+  display: flex;
+  width: 100%;
+  column-gap: 2%;
+  margin-top: 70px;
+  flex-wrap: wrap;
+}
+
+.track-control>.inp {
+  width: 60%;
+  min-width: 200px;
+}
+
+.track-control>.btn {
+  display: block;
+  width: 35%;
+  padding: 10px 0px;
+}
+
+.diet-container input{
+  box-shadow: 0 0 10px 0 #9a59b8cc;
+  border: none;
+  padding: 10px;
+  width: 90%;
+  display: block;
+  margin: auto;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+
+.diet{
+  align-self: flex-start;
+  row-gap: 20px;
+  flex-direction: column;
+  max-width: 590px;
+  margin:40px auto;
+}
+
+.diet-item{
+  color: rgb(255, 255, 255);
+  padding: 15px 20px;
+  /* background-color: #535961; */
+  background-color: #dcc099 ;
+
+  margin: 15px 0;
+  border-radius: 20px;
+
+}
+
+.total{
+  /* background-color: #474e57; */
+  background-color: #d6af78 ;
+
+  color: #8e4a0a;
 }
