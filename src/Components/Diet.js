@@ -65,6 +65,7 @@ export default function Diet() {
     <section className="container-c diet-container">
       <div className="diet">
         <input
+          placeholder="DD/MM/YYYY"
           type="date"
           onChange={(event) => {
             setDate(new Date(event.target.value));
