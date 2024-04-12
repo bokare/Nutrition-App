@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { UserContext } from "../contexts/UserContext";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Food(props) {
   const [eatenQuantity, setEatenQuantity] = useState(100);
   const [food, setFood] = useState({});
   const [foodInitial, setFoodInital] = useState({});
   let loggedData = useContext(UserContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setFood(props.food);
@@ -15,7 +17,7 @@ export default function Food(props) {
   }, [props.food]);
 
   function calculateMacros(event) {
-    if (event.target.value.length != 0) {
+    if (event.target.value.length !== 0) {
       let quantity = Number(event.target.value);
       setEatenQuantity(quantity);
 
@@ -56,6 +58,7 @@ export default function Food(props) {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        navigate("/diet");
       })
       .catch((err) => {
         console.log(err);
@@ -65,7 +68,7 @@ export default function Food(props) {
   return (
     <div className="food">
       <div className="food-img">
-        <img className="food-image" src={food.imageUrl} />
+        <img className="food-image" alt="img" src={food.imageUrl} />
       </div>
 
       <h3 style={{color:"orange"}}>

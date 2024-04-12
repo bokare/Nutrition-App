@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext,  } from "react";
 import { UserContext } from "../contexts/UserContext";
 import { Link, useNavigate } from "react-router-dom";
 export default function Login() {

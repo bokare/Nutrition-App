@@ -31,6 +31,7 @@ export default function Diet() {
       .then((response) => response.json())
       .then((data) => {
         setItems(data);
+        console.log(data)
       })
       .catch((err) => {
         console.log(err);
