@@ -23,7 +23,6 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(userCreds);
 
     fetch("https://nutrition-app-backend.vercel.app/login", {
       method: "POST",
